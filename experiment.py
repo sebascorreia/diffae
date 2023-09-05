@@ -114,7 +114,7 @@ class LitModel(pl.LightningModule):
             conds_mean=self.conds_mean,
             conds_std=self.conds_std,
         )
-        pred_img = (pred_img + 1) / 2
+        #pred_img = (pred_img + 1) / 2
         return pred_img
 
     def render(self, noise, cond=None, T=None):
@@ -135,7 +135,7 @@ class LitModel(pl.LightningModule):
                                           noise,
                                           sampler=sampler,
                                           latent_sampler=None)
-        pred_img = (pred_img + 1) / 2
+        #pred_img = (pred_img + 1) / 2
         return pred_img
 
     def encode(self, x):
